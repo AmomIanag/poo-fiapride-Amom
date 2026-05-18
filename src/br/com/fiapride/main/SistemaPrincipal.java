@@ -72,7 +72,8 @@ public class SistemaPrincipal {
         gatos.add(gato2);
 
         for (Gato gato : gatos) {
-            System.out.println(gato.getNome() + ": " + gato.emitirSom());
+            System.out.println(gato.getNome() + ": " + gato.emitirSom()); 
+
         }
     }
 }

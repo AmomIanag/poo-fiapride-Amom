@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Gato {
+public abstract class Gato {
 
     // Atributos privados
     private String nome;
@@ -91,8 +91,5 @@ public class Gato {
             System.out.println(nome + " cresceu e agora mede: " + tamanho + " cm");
         }
     }
-    // Método genérico para polimorfismo
-    public String emitirSom() {
-        return "Som genérico de gato";
-    }
+    public abstract String emitirSom();
 }
