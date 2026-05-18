@@ -8,9 +8,13 @@ public class Gato {
     private double tamanho;
     private double peso;
 
+    // Associação
+    private Tutor tutor;
+
     // CONSTRUTOR
-    public Gato(String nome) {
+    public Gato(String nome, Tutor tutor) {
         this.setNome(nome);
+        this.tutor = tutor;
     }
 
     // GETS E SETS
@@ -19,7 +23,6 @@ public class Gato {
         return nome;
     }
 
-    // Regra para o nome
     public void setNome(String nome) {
 
         if (nome == null || nome.isEmpty()) {
@@ -27,6 +30,14 @@ public class Gato {
         } else {
             this.nome = nome;
         }
+    }
+
+    public Tutor getTutor() {
+        return tutor;
+    }
+
+    public void setTutor(Tutor tutor) {
+        this.tutor = tutor;
     }
 
     public String getCor() {

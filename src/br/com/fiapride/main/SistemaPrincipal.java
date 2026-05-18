@@ -1,18 +1,24 @@
 package br.com.fiapride.main;
 
 import br.com.fiapride.model.Gato;
+import br.com.fiapride.model.Tutor;
 
 public class SistemaPrincipal {
 
     public static void main(String[] args) {
 
-        Gato gato1 = new Gato("Garfield");
+        // Criando tutores
+        Tutor tutor1 = new Tutor("Amom");
+        Tutor tutor2 = new Tutor("Felipe");
+
+        // Criando gatos
+        Gato gato1 = new Gato("Garfield", tutor1);
 
         gato1.setCor("Laranja");
         gato1.setTamanho(20);
         gato1.setPeso(5);
 
-        Gato gato2 = new Gato("Theo");
+        Gato gato2 = new Gato("Theo", tutor2);
 
         gato2.setCor("Cinza");
         gato2.setTamanho(100);
@@ -25,12 +31,14 @@ public class SistemaPrincipal {
 
         System.out.println("\n--- Meu Gato ---");
         System.out.println("Nome: " + gato1.getNome());
+        System.out.println("Tutor: " + gato1.getTutor().getNome());
         System.out.println("Cor: " + gato1.getCor());
         System.out.println("Tamanho inicial: " + gato1.getTamanho() + " cm");
         System.out.println("Peso inicial: " + gato1.getPeso() + " kg");
 
         System.out.println("\n--- Gato do Meu Amigo ---");
         System.out.println("Nome: " + gato2.getNome());
+        System.out.println("Tutor: " + gato2.getTutor().getNome());
         System.out.println("Cor: " + gato2.getCor());
         System.out.println("Tamanho inicial: " + gato2.getTamanho() + " cm");
         System.out.println("Peso inicial: " + gato2.getPeso() + " kg");
