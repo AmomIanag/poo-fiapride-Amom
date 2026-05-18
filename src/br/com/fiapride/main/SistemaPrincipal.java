@@ -4,6 +4,7 @@ import br.com.fiapride.model.Gato;
 import br.com.fiapride.model.GatoPersa;
 import br.com.fiapride.model.GatoSiames;
 import br.com.fiapride.model.Tutor;
+import br.com.fiapride.model.Brincavel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,7 @@ public class SistemaPrincipal {
         System.out.println("Peso atual: " + gato2.getPeso() + " kg");
         System.out.println("Tamanho atual: " + gato2.getTamanho() + " cm");
         // POLIMORFISMO
+        // POLIMORFISMO
         System.out.println("\n--- Sons dos Gatos ---");
 
         List<Gato> gatos = new ArrayList<>();
@@ -72,8 +74,20 @@ public class SistemaPrincipal {
         gatos.add(gato2);
 
         for (Gato gato : gatos) {
-            System.out.println(gato.getNome() + ": " + gato.emitirSom()); 
+            System.out.println(gato.getNome() + ": " + gato.emitirSom());
+        }
 
+        // INTERFACES
+        System.out.println("\n--- Interface Brincavel ---");
+
+        Brincavel[] brincaveis = {gato1, gato2};
+
+        for (Brincavel brincavel : brincaveis) {
+
+            brincavel.brincar();
+
+            System.out.println("Brinquedo favorito: "
+                    + brincavel.brinquedoFavorito());
         }
     }
 }

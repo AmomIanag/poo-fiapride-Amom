@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class GatoPersa extends Gato {
+public class GatoPersa extends Gato implements Brincavel {
 
     private String comprimentoPelo;
 
@@ -23,5 +23,15 @@ public class GatoPersa extends Gato {
     @Override
     public String emitirSom() {
         return "Miauu suave!";
+    }
+    // INTERFACE
+    @Override
+    public void brincar() {
+        System.out.println(getNome() + " está brincando calmamente com almofadas.");
+    }
+
+    @Override
+    public String brinquedoFavorito() {
+        return "Bolinha de lã";
     }
 }
