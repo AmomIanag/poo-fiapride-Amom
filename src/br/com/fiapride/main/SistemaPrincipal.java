@@ -1,6 +1,7 @@
 package br.com.fiapride.main;
 
-import br.com.fiapride.model.Gato;
+import br.com.fiapride.model.GatoPersa;
+import br.com.fiapride.model.GatoSiames;
 import br.com.fiapride.model.Tutor;
 
 public class SistemaPrincipal {
@@ -9,16 +10,16 @@ public class SistemaPrincipal {
 
         // Criando tutores
         Tutor tutor1 = new Tutor("Amom");
-        Tutor tutor2 = new Tutor("Felipe");
+        Tutor tutor2 = new Tutor("Aurea");
 
         // Criando gatos
-        Gato gato1 = new Gato("Garfield", tutor1);
+        GatoPersa gato1 = new GatoPersa("Garfield", tutor1, "Longo");
 
         gato1.setCor("Laranja");
         gato1.setTamanho(20);
         gato1.setPeso(5);
 
-        Gato gato2 = new Gato("Theo", tutor2);
+        GatoSiames gato2 = new GatoSiames("Luna", tutor2, "Azul");
 
         gato2.setCor("Cinza");
         gato2.setTamanho(100);
@@ -32,16 +33,14 @@ public class SistemaPrincipal {
         System.out.println("\n--- Meu Gato ---");
         System.out.println("Nome: " + gato1.getNome());
         System.out.println("Tutor: " + gato1.getTutor().getNome());
+        System.out.println("Tipo de pelo: " + gato1.getComprimentoPelo());
         System.out.println("Cor: " + gato1.getCor());
-        System.out.println("Tamanho inicial: " + gato1.getTamanho() + " cm");
-        System.out.println("Peso inicial: " + gato1.getPeso() + " kg");
 
-        System.out.println("\n--- Gato do Meu Amigo ---");
+        System.out.println("\n--- Gato da Minha Namorada ---");
         System.out.println("Nome: " + gato2.getNome());
         System.out.println("Tutor: " + gato2.getTutor().getNome());
+        System.out.println("Cor dos olhos: " + gato2.getCorOlhos());
         System.out.println("Cor: " + gato2.getCor());
-        System.out.println("Tamanho inicial: " + gato2.getTamanho() + " cm");
-        System.out.println("Peso inicial: " + gato2.getPeso() + " kg");
 
         // Evolução gato 1
         System.out.println("\n--- Evolução do Meu Gato ---");
@@ -53,7 +52,7 @@ public class SistemaPrincipal {
         System.out.println("Tamanho atual: " + gato1.getTamanho() + " cm");
 
         // Evolução gato 2
-        System.out.println("\n--- Evolução do Gato do Meu Amigo ---");
+        System.out.println("\n--- Evolução do Gato da Minha Namorada ---");
 
         gato2.comer(-1);
         gato2.crescer(3);
