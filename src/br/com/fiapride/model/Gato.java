@@ -4,7 +4,7 @@ public class Gato {
 
     // Atributos privados
     private String cor;
-    private double tamanho; //atributos privados
+    private double tamanho;
     private double peso;
 
     // GETS E SETS

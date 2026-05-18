@@ -18,7 +18,7 @@ public class SistemaPrincipal {
         gato2.setTamanho(100);
         gato2.setPeso(6);
 
-        // TESTE DA REGRA
+        // Teste da regra
         gato2.setPeso(-10);
 
         System.out.println("--- Sistema FiapRide ---");
