@@ -6,13 +6,13 @@ public class SistemaPrincipal {
 
     public static void main(String[] args) {
 
-        Gato gato1 = new Gato();
+        Gato gato1 = new Gato("Garfield");
 
         gato1.setCor("Laranja");
         gato1.setTamanho(20);
         gato1.setPeso(5);
 
-        Gato gato2 = new Gato();
+        Gato gato2 = new Gato("Theo");
 
         gato2.setCor("Cinza");
         gato2.setTamanho(100);
@@ -24,11 +24,13 @@ public class SistemaPrincipal {
         System.out.println("--- Sistema FiapRide ---");
 
         System.out.println("\n--- Meu Gato ---");
+        System.out.println("Nome: " + gato1.getNome());
         System.out.println("Cor: " + gato1.getCor());
         System.out.println("Tamanho inicial: " + gato1.getTamanho() + " cm");
         System.out.println("Peso inicial: " + gato1.getPeso() + " kg");
 
         System.out.println("\n--- Gato do Meu Amigo ---");
+        System.out.println("Nome: " + gato2.getNome());
         System.out.println("Cor: " + gato2.getCor());
         System.out.println("Tamanho inicial: " + gato2.getTamanho() + " cm");
         System.out.println("Peso inicial: " + gato2.getPeso() + " kg");

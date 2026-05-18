@@ -3,11 +3,31 @@ package br.com.fiapride.model;
 public class Gato {
 
     // Atributos privados
+    private String nome;
     private String cor;
     private double tamanho;
     private double peso;
 
+    // CONSTRUTOR
+    public Gato(String nome) {
+        this.setNome(nome);
+    }
+
     // GETS E SETS
+
+    public String getNome() {
+        return nome;
+    }
+
+    // Regra para o nome
+    public void setNome(String nome) {
+
+        if (nome == null || nome.isEmpty()) {
+            System.out.println("O gato precisa ter um nome!");
+        } else {
+            this.nome = nome;
+        }
+    }
 
     public String getCor() {
         return cor;
@@ -46,7 +66,7 @@ public class Gato {
             System.out.println("Quantidade de comida negativa! (alimenta esse gato)");
         } else {
             peso += quantidadeComida;
-            System.out.println("O gato comeu e agora pesa: " + peso + " kg");
+            System.out.println(nome + " comeu e agora pesa: " + peso + " kg");
         }
     }
 
@@ -57,7 +77,7 @@ public class Gato {
             System.out.println("O gato não teve crescimento");
         } else {
             tamanho += crescimento;
-            System.out.println("O gato cresceu e agora mede: " + tamanho + " cm");
+            System.out.println(nome + " cresceu e agora mede: " + tamanho + " cm");
         }
     }
 }
