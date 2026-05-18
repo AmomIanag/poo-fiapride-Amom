@@ -1,17 +1,47 @@
 package br.com.fiapride.model;
-<<<<<<< HEAD
 
 public class Gato {
 
-    public String cor;
-    public double tamanho;
-    public double peso;
+    // Atributos privados
+    private String cor;
+    private double tamanho; //atributos privados
+    private double peso;
 
+    // GETS E SETS
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public double getTamanho() {
+        return tamanho;
+    }
+
+    public void setTamanho(double tamanho) {
+        this.tamanho = tamanho;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    // REGRA ESPECIAL
+    public void setPeso(double peso) {
+
+        if (peso <= 0) {
+            System.out.println("Peso inválido! O gato não pode ter peso negativo ou zero.");
+        } else {
+            this.peso = peso;
+        }
+    }
 
     // Método para o gato comer
     public void comer(double quantidadeComida) {
 
-        // Regra de negócio
         if (quantidadeComida <= 0) {
             System.out.println("Quantidade de comida negativa! (alimenta esse gato)");
         } else {
@@ -23,7 +53,6 @@ public class Gato {
     // Método para o gato crescer
     public void crescer(double crescimento) {
 
-        // Regra de negócio
         if (crescimento <= 0) {
             System.out.println("O gato não teve crescimento");
         } else {
@@ -31,12 +60,4 @@ public class Gato {
             System.out.println("O gato cresceu e agora mede: " + tamanho + " cm");
         }
     }
-=======
-public class Gato { // <-- Use o nome do SEU objeto    
-    // As características que você pensou    
-    public String cor;
-    public float peso;
-    public float tamanho;
-    
->>>>>>> dfa228c83fc4a3acd4d8a14c052a5355ce32cc3c
 }
