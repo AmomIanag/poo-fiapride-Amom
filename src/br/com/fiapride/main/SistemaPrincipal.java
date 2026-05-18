@@ -1,8 +1,12 @@
 package br.com.fiapride.main;
 
+import br.com.fiapride.model.Gato;
 import br.com.fiapride.model.GatoPersa;
 import br.com.fiapride.model.GatoSiames;
 import br.com.fiapride.model.Tutor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SistemaPrincipal {
 
@@ -16,13 +20,13 @@ public class SistemaPrincipal {
         GatoPersa gato1 = new GatoPersa("Garfield", tutor1, "Longo");
 
         gato1.setCor("Laranja");
-        gato1.setTamanho(20);
+        gato1.setTamanho(18);
         gato1.setPeso(5);
 
         GatoSiames gato2 = new GatoSiames("Luna", tutor2, "Azul");
 
         gato2.setCor("Cinza");
-        gato2.setTamanho(100);
+        gato2.setTamanho(20);
         gato2.setPeso(6);
 
         // Teste da regra
@@ -59,5 +63,16 @@ public class SistemaPrincipal {
 
         System.out.println("Peso atual: " + gato2.getPeso() + " kg");
         System.out.println("Tamanho atual: " + gato2.getTamanho() + " cm");
+        // POLIMORFISMO
+        System.out.println("\n--- Sons dos Gatos ---");
+
+        List<Gato> gatos = new ArrayList<>();
+
+        gatos.add(gato1);
+        gatos.add(gato2);
+
+        for (Gato gato : gatos) {
+            System.out.println(gato.getNome() + ": " + gato.emitirSom());
+        }
     }
 }

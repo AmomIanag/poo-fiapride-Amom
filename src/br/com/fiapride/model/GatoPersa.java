@@ -18,4 +18,10 @@ public class GatoPersa extends Gato {
     public void setComprimentoPelo(String comprimentoPelo) {
         this.comprimentoPelo = comprimentoPelo;
     }
+
+    // POLIMORFISMO
+    @Override
+    public String emitirSom() {
+        return "Miauu suave!";
+    }
 }

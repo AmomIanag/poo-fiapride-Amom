@@ -43,7 +43,7 @@ public class Gato {
     public String getCor() {
         return cor;
     }
-
+    
     public void setCor(String cor) {
         this.cor = cor;
     }
@@ -90,5 +90,9 @@ public class Gato {
             tamanho += crescimento;
             System.out.println(nome + " cresceu e agora mede: " + tamanho + " cm");
         }
+    }
+    // Método genérico para polimorfismo
+    public String emitirSom() {
+        return "Som genérico de gato";
     }
 }

@@ -18,4 +18,10 @@ public class GatoSiames extends Gato {
     public void setCorOlhos(String corOlhos) {
         this.corOlhos = corOlhos;
     }
+
+    // POLIMORFISMO
+    @Override
+    public String emitirSom() {
+        return "MIAAAAU!";
+    }
 }
